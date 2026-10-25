@@ -1,0 +1,39 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <list>
+          <option value="alembic" />
+          <option value="asyncpg" />
+          <option value="bildock-lib" />
+          <option value="fastapi" />
+          <option value="greenlet" />
+          <option value="pydantic" />
+          <option value="pydantic-settings" />
+          <option value="sqlalchemy" />
+          <option value="uvicorn" />
+          <option value="limits" />
+          <option value="python-multipart" />
+          <option value="redis" />
+          <option value="slowapi" />
+          <option value="bcrypt" />
+          <option value="passlib" />
+          <option value="pyjwt" />
+          <option value="aiosmtplib" />
+          <option value="arq" />
+          <option value="fastapi-sso" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyStringConversionWithoutDunderMethodInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="reportedTypes">
+        <list>
+          <option value="object" />
+          <option value="types.FunctionType" />
+        </list>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="false" level="WARNING" enabled_by_default="false" />
+  </profile>
+</component>
