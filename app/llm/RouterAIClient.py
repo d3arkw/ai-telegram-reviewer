@@ -7,15 +7,17 @@ from app.schemas import CodeReviewResponse
 
 
 class RouterAIClient(BaseLLMClient):
-    def __init__(self) -> None:
+    def __init__(self, api_key: str | None = None, model: str | None = None) -> None:
+        self.model = model or settings.ROUTERAI_MODEL
         self.client = AsyncOpenAI(
-            api_key=settings.ROUTERAI_API_KEY, base_url="https://routerai.ru/api/v1"
+            api_key=api_key or settings.ROUTERAI_API_KEY,
+            base_url="https://routerai.ru/api/v1",
         )
 
     async def review(self, prompt: str) -> CodeReviewResponse:
         try:
             response = await self.client.chat.completions.create(
-                model=settings.ROUTERAI_MODEL,
+                model=self.model,
                 messages=[
                     {
                         "role": "user",
