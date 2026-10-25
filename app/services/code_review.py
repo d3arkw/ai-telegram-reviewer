@@ -13,7 +13,7 @@ class CodeReviewService:
 
     async def create_review(self, code: str, level: ReviewLevel):
         prompt = self._build_prompt(code, level)
-        return await self.llm.review(prompt)
+        return await self.llm.review(prompt, code=code)
 
     def _build_prompt(self, code: str, level: ReviewLevel) -> str:
         return _PROMPT_TEMPLATE.replace("__LEVEL__", level.value).replace(

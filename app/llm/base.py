@@ -5,5 +5,5 @@ from app.schemas import CodeReviewResponse
 
 class BaseLLMClient(ABC):
     @abstractmethod
-    async def review(self, prompt: str) -> CodeReviewResponse:
+    async def review(self, prompt: str, code: str = "") -> CodeReviewResponse:
         raise NotImplementedError
